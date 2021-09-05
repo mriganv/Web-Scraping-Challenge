@@ -1,0 +1,130 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <!-- Title and Scrape button -->
+    <div class="jumbotron text-center " style="padding-bottom:10px; padding-top:10px;">
+        <h1 id="border_image2"
+            style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+            MISSION TO MARS</h1>
+        <p><a class="btn btn-primary btn-lg" style=background-color:#ee6a05; href="/scrape" role="button">Scrape New
+                Data</a></p>
+    </div>
+
+    <!-- Container for Latest Mars News and Paragraph -->
+    <div class="row p-4">
+        <div class="container">
+            <h3 id="border_image2"
+                style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+                Latest Mars News</h3>
+            <p style="text-align:left; font-size:25px;" ><strong>{{ Mars.Latest_news_title }}</strong></h2>
+            <p style="text-align:left;font-size:25px;">{{ Mars.Latest_news_paragraph }}</p>
+        </div>
+    </div>
+
+    <!-- Columns for Featured Space Image -->
+    <div class="row p-1">
+        <div class="col-sm-12 col-md-7">
+            <h3 id="border_image2"
+                style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+                Feautred Image</h3>
+            <img class="image" width="100%" src={{Mars.Featured_image_url }} alt="Featured_image">
+        </div>
+        <!-- Mars facts table  -->
+        <div class="col-sm-12 col-md-5">
+            <h3 id="border_image2"
+                style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+                Mars Planet Profile</h3>
+            <!----Table goes inside the card---->
+            <div class="card">
+                <!-- Actual Mars facts table -->
+                <div class="card-body table-responsive" style="background-color: rgb(246, 193, 140);">
+                    {{ Mars.Mars_facts_html_table|safe}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container for Mars Hemispheres -->
+    <h1 id="border_image2"
+        style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+        MARS HEMISPHERES</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 id="border_image2"
+                    style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+                    {{ Mars.Hemisphere_images[0].Title }}</h5>
+                <!-- <h5 style=font-size:x-large;> {{ Mars.Hemisphere_images[0].Title }} </h5> -->
+                <img src={{ Mars.Hemisphere_images[0].img_url }} class="img-fluid">
+            </div>
+
+            <div class="col-md-6">
+                <h5 id="border_image2"
+                    style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+                    {{ Mars.Hemisphere_images[1].Title }}</h5>
+                <!-- <h5 style=font-size:x-large;>{{ Mars.Hemisphere_images[1].Title }} </h5> -->
+                <img src={{ Mars.Hemisphere_images[1].img_url }} class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h5 id="border_image2"
+                    style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+                    {{ Mars.Hemisphere_images[2].Title }}</h5>
+                <!-- <h5 style=font-size:x-large;>{{ Mars.Hemisphere_images[2].Title }} </h5> -->
+                <img src={{ Mars.Hemisphere_images[2].img_url}} class="img-fluid">
+            </div>
+
+            <div class="col-md-6">
+                <h5 id="border_image2"
+                    style="border-width: 15px; text-align:center; border-style: solid; border-color:initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+                    {{ Mars.Hemisphere_images[3].Title }}</h5>
+                <!-- <h5 style=font-size:x-large;>{{ Mars.Hemisphere_images[3].Title }} </h5> -->
+                <img src={{ Mars.Hemisphere_images[3].img_url }} class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- <p id="border_image2"
+        style="border-width: 15px; border-style: solid; border-color: initial; border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 / 1 / 0 stretch; padding: 5px; -webkit-border-image: url(&quot;https://cdn.bitdegree.org/learn/border-img-5.png&quot;) 20 fill stretch;">
+        Here we see the image as a border!</p>
+
+    <p id="border_image3"
+        style="border: 30px; border-style: solid; padding: 5px; -webkit-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png') 20 round; -o-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png') 20 round; border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 round;">
+        Here we see that image acting as a border!</p>
+    <h2 id="changing-slice-values">Changing Slice Values<span class="copy-heading"
+            onclick="copyHeading('changing-slice-values')"><i class="fas fa-link"></i></span></h2>
+     -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

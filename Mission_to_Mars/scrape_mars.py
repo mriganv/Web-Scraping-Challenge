@@ -73,10 +73,10 @@ def scrape_info():
     tables = pd.read_html(url)
     type(tables)
 
-    df = tables[1]
-    df.columns = ['Mars Planet Profile', 'Values']
+    df = tables[0]
+    df.columns = ['Mars Facts', 'Mars', 'Earth']
 
-    Mars_facts_html_table = df.to_html(index=False, header=False, border=0, classes="table table-sm table-striped font-weight: bold;")
+    Mars_facts_html_table = df.to_html(index=False, header=False, border=0, classes="table table-striped font-weight: bold;")
 
 
 #################################################################################################################################################

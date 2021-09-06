@@ -43,8 +43,8 @@
         font-size: 16px;
     }  
 
-   .table td {
-       font-size: 18px;
+    .table td {
+    font-size: 18px;
     }
 
     td{ 
@@ -56,21 +56,16 @@
 	border: 2px solid #036;
     }
 
-   .col-md-6{ background-color: #036;}
+    .col-md-6{ background-color: #036;}
 
-       border_image2{
-       text-align: center;
+    border_image2{
+    text-align: center;
 
-     } 
+    } 
 
-   .borderimg { 
-       border: 10px solid transparent;
-       padding: 15px;
-       border-image: url(border.png) 30 stretch;
-     }
+    .borderimg { 
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.png) 30 stretch;
+    }
 
-   .container {
-      position: relative;
-      text-align: center;
-      color: white;
-     }

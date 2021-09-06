@@ -39,7 +39,8 @@ We did our initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and R
 
 * Used Pandas to convert the data to a HTML table string.
 
-![Screenshot 2021-09-05 224130](https://user-images.githubusercontent.com/81407869/132166153-7dd1dfb1-daae-46de-9f4f-6e966b350fe4.jpg)
+![Screenshot 2021-09-06 142755](https://user-images.githubusercontent.com/81407869/132261447-39053e46-490b-43e4-b314-21e19affbd9e.jpg)
+
 
 
 ### Mars Hemispheres
@@ -79,7 +80,8 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________________________________________________________
 
 
-![final_app_marsdata](https://user-images.githubusercontent.com/81407869/132166410-7c8f1daa-a777-4a0b-9f67-4c36037ee4bd.png)
+![final_app_marsdata](https://user-images.githubusercontent.com/81407869/132261470-5271e18e-12b0-4164-9288-99d080aa2d7a.png)
+
 
 
 

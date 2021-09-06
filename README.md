@@ -16,7 +16,7 @@ We did our initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and R
 * Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Assigned the text to variables to use it to later add to a  dictionary. 
 
 ![Latest news and paragraph screenshot](https://user-images.githubusercontent.com/81407869/132165999-1a47a667-f387-48fa-9d2f-931e98189e4f.jpg)!
-```
+
 
 ### JPL Mars Space Images - Featured Image
 
@@ -28,11 +28,10 @@ We did our initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and R
 
 * Saved a complete url string for this image.
 
-```
 
-[featured image](https://user-images.githubusercontent.com/81407869/132166064-1cc90d00-b0d7-4d39-8225-805b5cd051aa.jpg)
+![featured image](https://user-images.githubusercontent.com/81407869/132166745-b90d46ca-c342-4562-94f9-252dc66dfad6.jpg)
 
-```
+
 
 ### Mars Facts
 
@@ -40,7 +39,8 @@ We did our initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and R
 
 * Used Pandas to convert the data to a HTML table string.
 
-![Screenshot 2021-09-05 224130](https://user-images.githubusercontent.com/81407869/132166153-7dd1dfb1-daae-46de-9f4f-6e966b350fe4.jpg)!
+![Screenshot 2021-09-05 224130](https://user-images.githubusercontent.com/81407869/132166153-7dd1dfb1-daae-46de-9f4f-6e966b350fe4.jpg)
+
 
 ### Mars Hemispheres
 
@@ -53,7 +53,8 @@ We did our initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and R
 * Appended the dictionary with the image url string and the hemisphere title to a list. This list will contain one dictionary for each hemisphere.
 
 
-[image urls ](https://user-images.githubusercontent.com/81407869/132166208-879393aa-cd85-4316-9fe0-96a6cb8096fd.jpg)
+![image urls ](https://user-images.githubusercontent.com/81407869/132166814-f078516c-16fc-495f-b6f6-a543611825bf.jpg)
+
 
 ## Step 2 - MongoDB and Flask Application
 
@@ -72,10 +73,13 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 * The '/Marsdata' (Marsdata.html) route displays the collected data of Mars that were scraped from all of the URLs mentioned above and displays in an HTML page.
 
 ______________________________________________________________________________________________________________________________________________________________________________
-##Screenshots of the final Mars data displayed in HTML page
+## Screenshots 
+
 ![final_app_index](https://user-images.githubusercontent.com/81407869/132166397-9cb804e2-9e17-409b-9c7a-7a440587643e.png)
+
+
 ![final_app_marsdata](https://user-images.githubusercontent.com/81407869/132166410-7c8f1daa-a777-4a0b-9f67-4c36037ee4bd.png)
 
 
 
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
